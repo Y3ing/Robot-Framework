@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.9.20 on linux)" generated="2024-11-02T10:13:08.245631" rpa="false" schemaversion="5">
+<suite id="s1" name="Login test" source="/home/admin/Desktop/Training/Cases/Login_test.robot">
+<test id="s1-t1" name="Login with valid Passcode Test" line="16">
+<kw name="Begin Web Test" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-11-02T10:13:08.374066" level="INFO">Opening browser 'chrome' to base url 'https://demo.guru99.com/insurance/v1/index.php'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-11-02T10:13:08.373783" elapsed="5.432057"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-11-02T10:13:13.806348" elapsed="0.022194"/>
+</kw>
+<status status="PASS" start="2024-11-02T10:13:08.372891" elapsed="5.455867"/>
+</kw>
+<kw name="Open Login Page">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-11-02T10:13:13.830216" level="INFO">Opening url 'https://demo.guru99.com/insurance/v1/index.php'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-11-02T10:13:13.829794" elapsed="0.363371"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-02T10:13:16.193883" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-02T10:13:14.193493" elapsed="2.000496"/>
+</kw>
+<status status="PASS" start="2024-11-02T10:13:13.829310" elapsed="2.364789"/>
+</kw>
+<kw name="Enter Email">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-02T10:13:16.195128" level="INFO">Typing text 'bro12344321@gmail.com' into text field 'name=email'.</msg>
+<arg>name=${EMAIL_FIELD}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-02T10:13:16.194635" elapsed="0.065962"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-02T10:13:18.261345" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-02T10:13:16.261032" elapsed="2.000422"/>
+</kw>
+<arg>${EMAIL}</arg>
+<status status="PASS" start="2024-11-02T10:13:16.194315" elapsed="2.067293"/>
+</kw>
+<kw name="Enter Password">
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-11-02T10:13:18.262405" level="INFO">Typing password into text field 'name=password'.</msg>
+<msg time="2024-11-02T10:13:18.290081" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>name=${PASSWORD_FIELD}</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-02T10:13:18.262164" elapsed="0.063475"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>name=submit</arg>
+<arg>2s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-02T10:13:18.325891" elapsed="0.018408"/>
+</kw>
+<arg>${PASSWORD}</arg>
+<status status="PASS" start="2024-11-02T10:13:18.261852" elapsed="0.082576"/>
+</kw>
+<kw name="Click Login Button">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-02T10:13:18.345134" level="INFO">Clicking button 'name=submit'.</msg>
+<arg>name=submit</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-02T10:13:18.344954" elapsed="2.312452"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-02T10:13:25.657924" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-02T10:13:20.657608" elapsed="5.000426"/>
+</kw>
+<status status="PASS" start="2024-11-02T10:13:18.344652" elapsed="7.313494"/>
+</kw>
+<kw name="Get Into Dashboard">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-11-02T10:13:25.672224" level="INFO">Current page contains text 'Broker Insurance WebPage'.</msg>
+<arg>${SUCCESS_DASHBOARD}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-11-02T10:13:25.658763" elapsed="0.013565"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-02T10:13:27.672787" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-02T10:13:25.672506" elapsed="2.000388"/>
+</kw>
+<status status="PASS" start="2024-11-02T10:13:25.658413" elapsed="2.014593"/>
+</kw>
+<kw name="End Web Test" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-11-02T10:13:27.673676" elapsed="0.071222"/>
+</kw>
+<status status="PASS" start="2024-11-02T10:13:27.673335" elapsed="0.071719"/>
+</kw>
+<doc>Login email and password with success page "Broker Insurance WebPage".</doc>
+<status status="PASS" start="2024-11-02T10:13:08.372018" elapsed="19.373175"/>
+</test>
+<status status="PASS" start="2024-11-02T10:13:08.246660" elapsed="19.499175"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Login test">Login test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
